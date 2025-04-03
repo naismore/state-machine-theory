@@ -114,7 +114,7 @@ def buildNfa(node):
         start = State()
         accept = State()
         left = buildNfa(node.left)
-        rightNfa = buildNfa(node.right)
+        right = buildNfa(node.right)
         start.addEpsilonTransition(left.startState)
         start.addEpsilonTransition(right.startState)
         left.acceptState.addEpsilonTransition(accept)
